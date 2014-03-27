@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  sales_person_id: 1
+  name: MyString
+  phone: MyString
+  email: MyString
+  username: MyString
+  password: MyString
+  territory_id: 1
+
+two:
+  sales_person_id: 1
+  name: MyString
+  phone: MyString
+  email: MyString
+  username: MyString
+  password: MyString
+  territory_id: 1

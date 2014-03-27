@@ -1,0 +1,48 @@
+<!-- All work done within this view was completed by Zachary T. Kaspar 1st -->
+<div style="width: 450px;  margin-left: 35%; margin-right: 40%;">
+<h2>Create new account</h2>
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+  <div class="field">
+    <!--makes a text field that fits the DB column called-->
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label "State" %><br />
+    <%= f.text_field :c_state %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br />
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirmation" %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+<br/>
+  <div class="actions">
+    <%= f.submit "Confirm" %>
+  </div>
+<% end %>
+
+<% link_to 'Back', users_path %>
+</div>
+<br/><br/><br/><br/>

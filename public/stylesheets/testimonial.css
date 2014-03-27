@@ -1,0 +1,188 @@
+
+.title {
+    margin: 0 0 31px;
+    overflow: hidden;
+    display: table
+}
+
+.title h1, .title h2, .title h3, .title h4, .title h5, .title h6 {
+    display: table-cell;
+    white-space: pre
+}
+
+.title h1, #main .post-content .title h1 {
+    float: left;
+    padding: 0 8px 0 0 !important;
+    margin: 0 !important
+}
+
+.title h2, #main .post-content .title h2 {
+    float: left;
+    padding: 0 8px 0 0 !important;
+    margin: 0 !important;
+    font-size: 18px !important
+}
+
+.title h3, #main .post-content .title h3 {
+    float: left;
+    padding: 0 8px 0 0 !important;
+    margin: 0 !important
+}
+
+.title h4, #main .post-content .title h4 {
+    float: left;
+    padding: 0 8px 0 0 !important;
+    margin: 0 !important
+}
+
+.title h5, #main .post-content .title h5 {
+    float: left;
+    padding: 0 8px 0 0 !important;
+    margin: 0 !important
+}
+
+.title h6, #main .post-content .title h6 {
+    float: left;
+    padding: 0 8px 0 0 !important;
+    margin: 0 !important
+}
+
+.title .title-sep-container {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    position: relative;
+    height: 6px
+}
+
+.title-sep {
+    display: block;
+    border-top: 1px solid #818181;
+    border-bottom: 1px solid #818181;
+    width: 100%;
+    position: relative;
+    height: 6px
+}
+
+.one_half, .one_third, .two_third, .three_fourth, .one_fourth {
+    margin-right: 10px;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.one_half {
+    width: 48%
+}
+
+.one_third {
+    width: 30.6666%
+}
+
+.two_third {
+    width: 65.3332%
+}
+
+.one_fourth {
+    width: 22%
+}
+
+.three_fourth {
+    width: 74%
+}
+
+.review {
+    width: 100%
+}
+
+.review blockquote {
+    background: none !important;
+    border-left: none !important;
+    padding: 0 !important;
+    margin: 0 !important
+}
+
+.review blockquote q {
+    display: block;
+    padding: 25px 14px 24px 24px;
+    background: white;
+    font: 13px/20px 'PTSansItalic', arial, helvetica, sans-serif
+}
+
+.review blockquote q::before, .review blockquote q::after, .review blockquote q:before,
+.review blockquote q:after {
+    content: ''
+}
+
+.review blockquote q p:first-child::before {
+    content: open-quote
+}
+
+.review blockquote q p:last-child::after {
+    content: close-quote
+}
+
+.review blockquote div {
+    display: block;
+    padding: 12px 0 0 2px;
+    color: #333;
+    font-style: normal !important;
+    position: relative
+}
+
+.review blockquote div:after {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none
+}
+
+.review blockquote div:after {
+    border-color: rgba(72, 71, 71, 0);
+    border-top-color: #f6f3f3;
+    border-width: 10px;
+    bottom: auto;
+    top: 0px;
+    left: 30px
+}
+
+.review blockquote div strong {
+    padding: 0;
+    font: 13px/15px 'PTSansBold', arial, helvetica, sans-serif;
+    font-style: normal !important
+}
+
+.review blockquote div span {
+    font-style: normal !important
+}
+
+.review blockquote div {
+    float: left;
+    line-height: 15px
+}
+
+.review blockquote div .company-name {
+    padding-left: 53px;
+    background: url(ico-user.png) no-repeat;
+    display: block;
+    min-height: 29px;
+    padding-top: 6px;
+    font-style: normal !important
+}
+
+.review.male blockquote div .company-name {
+    background: url(ico-user.png) no-repeat
+}
+
+.review.female blockquote div .company-name {
+    background: url(ico-user-girl.png) no-repeat
+}
+
+.clearfix:after, #content:after {
+    content: "";
+    display: table;
+    clear: both
+}

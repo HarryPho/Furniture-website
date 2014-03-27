@@ -1,0 +1,28 @@
+
+<div class="grid_2">
+  <br /><br /><br />
+  <h2><%if !@orders.nil? %><%= @orders.count %> <%end%> orders(s) since <font color="#000000"><%=  "#{@month}/#{@day}/#{@year}" %></font></h2>
+  <body>
+    <%if !@orders.nil? and @orders.count > 0 %>
+      <center>
+
+        <table class="striped" cellspacing="0" cellpadding="0">
+          <thead><tr>
+            <th>Order Date</th>
+            <th>Date Ordered</th>
+          </tr></thead>
+
+          <%for r in @orders%>
+            <tbody><tr>
+              <td><%= r.order_id %></td>
+              <td><%= r.order_date %></td>
+            </tr></tbody>
+          <%end%>
+        </table>
+
+      </center>
+    <%else%>
+    <br /><br /><br /><br /><br /><br />
+    <%end%>
+  </body>
+</div>

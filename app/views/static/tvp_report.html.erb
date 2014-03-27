@@ -1,0 +1,47 @@
+<div class="grid_2">
+
+<center><h1>Total Value For Products Report</h1></center>
+
+<div class="col_8"><center>
+<canvas id="canvas" height="450" width="600"></canvas>
+</div></center>
+
+<div class="col_4"><center></br></br></br>
+<table class="striped" cellspacing="0" cellpadding="0">
+
+<thead><tr>
+    <th>Product ID</th>
+    <th>Total Value</th>
+</tr></thead>
+
+<%for r in @data%>
+
+<tbody><tr>
+    <td><%= r.pid %></td>
+    <td><%= number_to_currency(r.value) %></td>
+</tr></tbody>
+
+<%end%>
+
+</table>
+</div></center>
+
+<script>
+    var barChartData = {
+      labels : [ <%for r in @data%>"<%= r.pid %>",<%end%>],
+      datasets : [
+        {
+          fillColor : "rgba(151,187,205,0.5)",
+          strokeColor : "rgba(151,187,205,1)",
+          data : [<%for r in @data%>"<%= r.value %>",<%end%>]
+        }
+      ]
+      
+    }
+
+  var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
+</script>
+
+</div>
+</div>
+</div>

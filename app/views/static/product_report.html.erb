@@ -1,0 +1,32 @@
+<div class="grid_2">
+
+<center><h1>Product Report</h1></center>
+
+<div class="col_2"></div>
+
+<div class="col_8"><center>
+<table class="striped" cellspacing="0" cellpadding="0">
+        <thead><tr>
+          <th>Product ID</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Product Line</th>
+          <th>Annual Sales Goal</th>
+        </tr></thead>
+
+        <%for r in @data%>
+          <tbody><tr>
+            <td><%= r.pid %></td>
+            <td><%= r.description %></td>
+            <td><%= number_to_currency(r.price) %></td>
+            <td><%= r.plid %></td>
+            <td><%= number_to_currency(r.asg) %></td>
+          </tr></tbody>
+        <%end%>
+      </table>
+
+</div></center>
+
+<div class="col_2"></div>
+
+</div>

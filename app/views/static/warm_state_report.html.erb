@@ -1,0 +1,24 @@
+<div class="grid_2">
+  <br /><br /><br />
+  <body>
+    <center>
+
+      <table class="striped" cellspacing="0" cellpadding="0">
+        <thead><tr>
+          <th>Name</th>
+          <th>City</th>
+          <th>State</th>
+        </tr></thead>
+
+        <%for r in @data%>
+          <tbody><tr>
+            <td><%= r.name %></td>
+            <td><%= r.city %></td>
+            <td><%= r.c_state %></td>
+          </tr></tbody>
+        <%end%>
+      </table>
+
+    </center>
+  </body>
+</div>

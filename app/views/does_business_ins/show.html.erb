@@ -1,0 +1,13 @@
+<p>
+  <b>Customer:</b>
+  <%=h @does_business_in.customer_id %>
+</p>
+
+<p>
+  <b>Territory:</b>
+  <%=h @does_business_in.territory_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_does_business_in_path(@does_business_in) %> |
+<%= link_to 'Back', does_business_ins_path %>

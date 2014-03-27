@@ -1,0 +1,208 @@
+<div class="fixedheader">
+
+  <title> <%= title %> </title>
+
+<!-- ======================== Button Bar w/icons =========================== -->
+<!-- The conditional statements and logic of what can be seen by a user given their
+     type was done by Zachary T. Kaspar 1st-->
+<div class="grid">
+    <div align="left">
+       <h5><font color="black">TEAM4OFPS</font></h5>
+    </div>
+    <div align="right">
+      <ul class="button-bar">
+      <li><a href="<%=root_path%>"><i class="icon-home"></i> Home</a></li>
+      <% if signed_in? %>
+          <li>
+            <ul class="menu ">
+              <li><%= link_to user_from_email, signout_path, :method => :delete %>
+                <ul class="menu vertical right"
+                    <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+                 </ul>
+                </li>
+              </ul>
+          </li>
+        <% if determine_type? %>
+          <li><%= link_to "Cart", cart_path %><i class="icon-shopping-cart"></i></li>
+        <% else %>
+          <li>
+            <ul class="menu ">
+              <li><a  <%= link_to "Employee Services", reports_path  %> <i class="icon-upload-alt"></i> Reports</a>
+                <ul class="menu vertical right"
+                  <% if  determine_type_sales? %>
+                    <li><%= link_to "Warm States Report", {:controller => :static, :action => :warm_state_report} %></li>
+                    <li><%= link_to "Invoices Report", {:controller => :static, :action => :invoices_report} %></li>
+                    <li><%= link_to "Invoice by Order ID Report", {:controller => :static, :action => :invoices_select} %></li>
+                  <% end %>
+                  <% if  determine_type_inventory_manager? %>
+                    <li><%= link_to "Customers By States", {:controller => :static, :action => :customer_by_state} %></li>
+                    <li><%= link_to "Customers By City", {:controller => :static, :action => :customer_by_city} %></li>
+                  <% end %>
+                  <% if  determine_type_product_manager? %>
+                    <li><%= link_to "Customer Report", {:controller => :static, :action => :customer_report} %></li>
+                    <<li><%= link_to "Product Report", {:controller => :static, :action => :product_report} %></li>
+                    <<li><%= link_to "Product Line Report", {:controller => :static, :action => :product_line_report} %></li>
+                    <<li><%= link_to "OSD Report", {:controller => :static, :action => :osd_select} %></li>
+                    <<li><%= link_to "Order Report", {:controller => :static, :action => :order_report} %></li>
+                    <<li><%= link_to "Order Line Report", {:controller => :static, :action => :order_line_report} %></li>
+                    <<li><%= link_to "TVP Report", {:controller => :static, :action => :tvp_report} %></li>
+                    <li><%= link_to "PLSC Report", {:controller => :static, :action => :product_line_report} %></li>
+                  <% end %>
+                  <% if  determine_type_customer_support? %>
+                    <<li><%= link_to "Order Report", {:controller => :static, :action => :order_report} %></li>
+                    <a href="https://new.offerchat.com/login">Chat</a>
+                  <% end %>
+                  <% if  determine_type_owner? %>
+                    <li><%= link_to "Warm States Report", {:controller => :static, :action => :warm_state_report} %></li>
+                    <li><%= link_to "Invoices Report", {:controller => :static, :action => :invoices_report} %></li>
+                    <li><%= link_to "Customers By States", {:controller => :static, :action => :customer_by_state} %></li>
+                    <li><%= link_to "Customers By City", {:controller => :static, :action => :customer_by_city} %></li>
+                    <li><%= link_to "Customer Report", {:controller => :static, :action => :customer_report} %></li>
+                    <<li><%= link_to "Product Report", {:controller => :static, :action => :product_report} %></li>
+                    <<li><%= link_to "Product Line Report", {:controller => :static, :action => :product_line_report} %></li>
+                    <<li><%= link_to "OSD Report", {:controller => :static, :action => :osd_select} %></li>
+                    <<li><%= link_to "Order Report", {:controller => :static, :action => :order_report} %></li>
+                    <<li><%= link_to "Order Line Report", {:controller => :static, :action => :order_line_report} %></li>
+                    <<li><%= link_to "TVP Report", {:controller => :static, :action => :tvp_report} %></li>
+                    <li><%= link_to "PLSC Report", {:controller => :static, :action => :product_line_report} %></li>
+                    <li><%= link_to "Invoice by Order ID Report", {:controller => :static, :action => :invoices_select} %></li>
+                  <% end %>
+                 </ul>
+                </li>
+              </ul>
+            </li>
+        <% end %>
+      <% else %>
+        <li><%= link_to "Sign in", signin_path %> <i class="icon-upload-alt"></i> Sign In</li>
+      <% end %>
+
+     </ul>
+
+    </div>
+
+</div>
+<div class="grid">
+      
+</div>
+
+
+
+
+<!-- ====================== End Button Bar w/icons ========================= -->
+
+<div class="grid_2">
+<!-- =========================== Menu Horizontal  ========================== -->
+<center>
+<div id="containerMenu">
+
+    <ul id="nav" class="menuNew">
+    
+        <li <%= "id=\""+"selected"+"\"" if (params[:action].casecmp("livingroom")==0 or params[:action].casecmp("home")==0 or (params[:action].casecmp("home")!=0 and params[:action].casecmp("livingroom")!=0 and params[:action].casecmp("beedroom")!=0 and params[:action].casecmp("mattress")!=0 and params[:action].casecmp("bathroom")!=0 and params[:action].casecmp("kitchen")!=0 and params[:action].casecmp("office")!=0 and params[:action].casecmp("outdoor")!=0))%>><a href="<%= livingroom_path %>"><font color="white">Livingroom</font></a>
+      <ul class="submenu jaws">
+         <li2><a></a></li2>
+             <li><a href="livingroom#tabc1">Sets</a></li>
+             <li><a href="livingroom#tabc2">Chairs & Sofas</a></li>
+             <li><a href="livingroom#tabc3">TV & Media Furniture</a></li>
+             <li><a href="livingroom#tabc4">Storage</a></li>
+             <li><a href="livingroom#tabc5">Coffee & Side Tables</a></li>
+             <li><a href="livingroom#tabc6">Lighting</a></li>
+             <li><a href="livingroom#tabc7">Carpets</a></li>
+             <li><a href="livingroom#tabc8">Accessories</a></li>
+      </ul>
+        </li>
+        
+        <li <%= "id=\""+"selected"+"\"" if params[:action].casecmp("beedroom")==0 %>><a href="<%= beedroom_path %>"><font color="white">Bedroom</font></a>
+      <ul class="submenu jaws">
+         <li2><a></a></li2>
+         <li><a href="beedroom#tabc1">Sets</a></li>
+             <li><a href="beedroom#tabc2">Beds</a></li>
+             <li><a href="beedroom#tabc3">Bedroom Storage</a></li>
+             <li><a href="beedroom#tabc4">Night Stands</a></li>
+             <li><a href="beedroom#tabc5">Dressers & Mirrors</a></li>
+             <li><a href="beedroom#tabc6">Accessories</a></li>
+      </ul>         
+        </li>
+        
+        <li <%= "id=\""+"selected"+"\"" if params[:action].casecmp("mattress")==0 %>><a href="<%= mattress_path %>"><font color="white">Mattress</font></a>
+          <ul class="submenu jaws">
+         <li2><a></a></li2>
+             <li><a href="mattress#tabc1">King Size</a></li>
+             <li><a href="mattress#tabc2">Queen Size</a></li>
+             <li><a href="mattress#tabc3">Full Size</a></li>
+             <li><a href="mattress#tabc4">Twin</a></li>
+             <li><a href="mattress#tabc5">Single</a></li>
+             <li><a href="mattress#tabc6">Accessories</a></li>
+      </ul>
+        </li>
+        
+        <li <%= "id=\""+"selected"+"\"" if params[:action].casecmp("bathroom")==0 %>><a href="<%= bathroom_path %>"><font color="white">Bathroom</font></a>
+      <ul class="submenu jaws">
+         <li2><a></a></li2>
+               <li><a href="bathroom#tabc1">Sets</a></li>
+               <li><a href="bathroom#tabc2">Sink Cabinets</a></li>
+               <li><a href="bathroom#tabc3">Bathroom Storage</a></li>
+               <li><a href="bathroom#tabc4">Lighting</a></li>
+               <li><a href="bathroom#tabc5">Accessories</a></li>
+      </ul>
+          
+        </li>
+        <li <%= "id=\""+"selected"+"\"" if params[:action].casecmp("kitchen")==0 %>><a href="<%= kitchen_path %>"><font color="white">Kitchen</font></a>
+          <ul class="submenu jaws">
+         <li2><a></a></li2>
+               <li><a href="kitchen#tabc1">Sets</a></li>
+               <li><a href="kitchen#tabc2">Dining Tables</a></li>
+               <li><a href="kitchen#tabc3">Dining Chairs</a></li>
+               <li><a href="kitchen#tabc4">Kitchen Faucets & Sinks</a></li>
+               <li><a href="kitchen#tabc5">Kitchen Cabinets</a></li>
+               <li><a href="kitchen#tabc6">Accessories</a></li>
+      </ul>
+        </li>
+        <li <%= "id=\""+"selected"+"\"" if params[:action].casecmp("office")==0 %>><a href="<%= office_path %>"><font color="white">Office</font></a>
+                    <ul class="submenu jaws">
+         <li2><a></a></li2>
+           <li><a href="office#tabc1">Sets</a></li>
+           <li><a href="office#tabc2">Desks & Tables</a></li>
+           <li><a href="office#tabc3">Office Chairs</a></li>
+           <li><a href="office#tabc4">Storages</a></li>
+           <li><a href="office#tabc5">Accessories</a></li>
+      </ul>
+        </li>
+        <li <%= "id=\""+"selected"+"\"" if params[:action].casecmp("outdoor")==0 %>><a href="<%= outdoor_path %>"><font color="white">Outdoor</font></a>
+        <ul class="submenu jaws">
+         <li2><a></a></li2>
+            <li><a href="outdoor#tabc1">Sets</a></li>
+           <li><a href="outdoor#tabc2">Outdoor Dining</a></li>
+           <li><a href="outdoor#tabc3">Lounging</a></li>
+           <li><a href="outdoor#tabc4">Accessories</a></li>
+      </ul>
+        </li>
+        <li  <%= "id=\""+"selected"+"\"" if params[:action].casecmp("about")==0 %>><a href="<%= about_path %>"><font color="white">About Us</font></a>
+        <ul class="submenu jaws">
+         <li2><a></a></li2>
+           <li><a href="customer_service">Customer Service</a></li>
+           <li><a href="about">Our Story</a></li>
+           <li><a href="testimonials">Testimonials</a></li>
+           <li><a href="contact_us">Contact Us</a></li>
+      </ul>
+        </li>
+    </ul>
+    
+     <ul id="nav2">
+        <li><a href="#">
+
+        <% form_tag( params.merge({ :action => "search" }), :method => "get", :id => "search_text" ) do %>
+            <%= text_field :srch , '' , {:size => 24, :placeholder => "Search", :id => 'search_text1'} %>
+        <% end %>
+        </a></li>
+    </ul>
+</div>
+</center>
+
+
+
+<!-- ======================== END Menu Horozontal  ========================= -->
+</div>
+</div>
+<% if flash[:notice] %>
+  <div id="notice"><%= flash[:notice] %></div>
+<% end %>

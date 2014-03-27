@@ -1,0 +1,24 @@
+<h1>Listing supplies</h1>
+
+<table>
+  <tr>
+    <th>Vendor</th>
+    <th>Raw material</th>
+    <th>Supply unit price</th>
+  </tr>
+
+<% @supplies.each do |supply| %>
+  <tr>
+    <td><%=h supply.vendor_id %></td>
+    <td><%=h supply.raw_material_id %></td>
+    <td><%=h supply.supply_unit_price %></td>
+    <td><%= link_to 'Show', supply %></td>
+    <td><%= link_to 'Edit', edit_supply_path(supply) %></td>
+    <td><%= link_to 'Destroy', supply, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New supply', new_supply_path %>

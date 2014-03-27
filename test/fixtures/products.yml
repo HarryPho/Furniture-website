@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  product_id: 1
+  description: MyString
+  finish: MyString
+  standard_price: 1.5
+  product_line_id: 1
+  photo_path: MyString
+  cost: 1.5
+  annual_sales_goal: 1.5
+
+two:
+  product_id: 1
+  description: MyString
+  finish: MyString
+  standard_price: 1.5
+  product_line_id: 1
+  photo_path: MyString
+  cost: 1.5
+  annual_sales_goal: 1.5

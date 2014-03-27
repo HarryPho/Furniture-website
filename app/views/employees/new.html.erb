@@ -1,0 +1,59 @@
+<h1>New employee</h1>
+
+<% form_for(@employee) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :employee_id %><br />
+    <%= f.text_field :employee_id %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :c_state %><br />
+    <%= f.text_field :c_state %>
+  </p>
+  <p>
+    <%= f.label :zipcode %><br />
+    <%= f.text_field :zipcode %>
+  </p>
+  <p>
+    <%= f.label :date_hired %><br />
+    <%= f.date_select :date_hired %>
+  </p>
+  <p>
+    <%= f.label :birth_date %><br />
+    <%= f.date_select :birth_date %>
+  </p>
+  <p>
+    <%= f.label :employee_supervisor %><br />
+    <%= f.text_field :employee_supervisor %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', employees_path %>

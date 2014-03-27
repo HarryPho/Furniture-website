@@ -1,0 +1,18 @@
+<p>
+  <b>Vendor:</b>
+  <%=h @supply.vendor_id %>
+</p>
+
+<p>
+  <b>Raw material:</b>
+  <%=h @supply.raw_material_id %>
+</p>
+
+<p>
+  <b>Supply unit price:</b>
+  <%=h @supply.supply_unit_price %>
+</p>
+
+
+<%= link_to 'Edit', edit_supply_path(@supply) %> |
+<%= link_to 'Back', supplies_path %>

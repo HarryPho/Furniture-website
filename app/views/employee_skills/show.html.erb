@@ -1,0 +1,18 @@
+<p>
+  <b>Employee:</b>
+  <%=h @employee_skill.employee_id %>
+</p>
+
+<p>
+  <b>Skill:</b>
+  <%=h @employee_skill.skill_id %>
+</p>
+
+<p>
+  <b>Qualify date:</b>
+  <%=h @employee_skill.qualify_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_employee_skill_path(@employee_skill) %> |
+<%= link_to 'Back', employee_skills_path %>

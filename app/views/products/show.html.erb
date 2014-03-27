@@ -1,0 +1,31 @@
+<center>
+  <%= image_tag(@product.photo_path, :size => "300x150") %>
+  <p>
+  <div style="width: 250px; margin-left: 150px; text-align: justify;">
+  <b>Product id:</b>
+  <%= @product.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @product.description %>
+</p>
+
+<p>
+  <b>Finish:</b>
+  <%= @product.finish %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= number_to_currency(@product.standard_price) %>
+</p>
+  </div>
+<div class="row-entry">
+<%= button_to "Edit", edit_product_path(@product), :class => "button", :method => :get  %>
+ |
+ <%= button_to "Back", :back, :class => "button", :method => :get  %>
+</div>
+</center>
+
+<br /><br />

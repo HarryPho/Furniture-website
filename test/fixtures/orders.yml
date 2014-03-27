@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order_id: 1
+  order_date: 2013-11-21
+  customer_id: 1
+  fulfillment_date: 2013-11-21
+
+two:
+  order_id: 1
+  order_date: 2013-11-21
+  customer_id: 1
+  fulfillment_date: 2013-11-21

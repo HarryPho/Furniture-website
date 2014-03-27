@@ -1,0 +1,20 @@
+<h1>Editing produced_in</h1>
+
+<% form_for(@produced_in) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :product_id %><br />
+    <%= f.text_field :product_id %>
+  </p>
+  <p>
+    <%= f.label :work_center_id %><br />
+    <%= f.text_field :work_center_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @produced_in %> |
+<%= link_to 'Back', produced_ins_path %>

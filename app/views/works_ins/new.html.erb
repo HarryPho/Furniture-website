@@ -1,0 +1,19 @@
+<h1>New works_in</h1>
+
+<% form_for(@works_in) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :employee_id %><br />
+    <%= f.text_field :employee_id %>
+  </p>
+  <p>
+    <%= f.label :work_center_id %><br />
+    <%= f.text_field :work_center_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', works_ins_path %>

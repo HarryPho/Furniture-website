@@ -1,0 +1,48 @@
+<p>
+  <b>Name:</b>
+  <%=h @user.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @user.email %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @user.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @user.city %>
+</p>
+
+<p>
+  <b>C state:</b>
+  <%=h @user.c_state %>
+</p>
+
+<p>
+  <b>Zipcode:</b>
+  <%=h @user.zipcode %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @user.type %>
+</p>
+
+<p>
+  <b>Encrypted password:</b>
+  <%=h @user.encrypted_password %>
+</p>
+
+<p>
+  <b>Salt:</b>
+  <%=h @user.salt %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

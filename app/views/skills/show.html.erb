@@ -1,0 +1,13 @@
+<p>
+  <b>Skill:</b>
+  <%=h @skill.skill_id %>
+</p>
+
+<p>
+  <b>Skill description:</b>
+  <%=h @skill.skill_description %>
+</p>
+
+
+<%= link_to 'Edit', edit_skill_path(@skill) %> |
+<%= link_to 'Back', skills_path %>

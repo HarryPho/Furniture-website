@@ -1,0 +1,22 @@
+<br /><br /><br />
+<body>
+  <center>
+    <div style="display: table;" border="1">
+      <div style="display: table-row;">
+        <div style="display: table-cell;"><b>Order ID</b></div>
+        <div style="display: table-cell;"><b>Order Date</b></div>
+        <div style="display: table-cell;"><b>Customer ID</b></div>
+        <div style="display: table-cell;"><b>Fulfillment Date</b></div>
+      </div>
+      <%for r in @data%>
+        <div class=<%=cycle('list_line_even','list_line_odd')%> style="display: table-row;">
+          <div style="display: table-cell;"><%= r.oid %></div>
+          <div style="display: table-cell;"><%= r.o_date %></div>
+          <div style="display: table-cell;"><%= r.cid %></div>
+          <div style="display: table-cell;"><%= r.date %></div>
+        </div>
+      <%end%>
+
+    </div>
+  </center>
+</body>

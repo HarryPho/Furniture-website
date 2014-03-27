@@ -1,0 +1,44 @@
+<div class="grid_2">
+
+<center><h1>Testimonials</h1></center>
+<div class="col_3"></div>
+<div class="col_6"><center>
+
+<center><h1><%if !@testimonials.nil? %><%= @testimonials.count %> <%end%> result(s) for <font color="#0000FF"><%=  @st %></font></h1></center>
+<br />
+  <%if !@testimonials.nil? and @testimonials.count > 0 %>
+  <center>
+    <div style="display: table;">
+      <div class="brdr" style="display: table-row;" >
+       
+        <div style="display: table-cell; padding: 10px;"><b>Testimonial</b></div>
+      </div>
+      <% @testimonials.each do |testimonial| %>
+
+<div class="one_third">
+  <div class="one_third"></div>
+  <div class="review male">
+    <blockquote>
+      <q>" <%= testimonial.testimonial_content %>"
+      </q>
+      <div class="clearfix">
+        <span class="company-name">
+          <strong>Customer <%= testimonial.customer_id %></strong>
+            <span><%= testimonial.testimonial_date %></span>
+        </span>
+      </div>
+    </blockquote>
+  </div>
+</div>
+
+<% end %>
+  
+
+    </div>
+
+  </center>
+<%else%>
+<br /><br /><br /><br /><br /><br />
+<%end%>
+
+</div>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  vendor_id: 1
+  raw_material_id: 1
+  supply_unit_price: 1.5
+
+two:
+  vendor_id: 1
+  raw_material_id: 1
+  supply_unit_price: 1.5

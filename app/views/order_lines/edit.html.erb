@@ -1,0 +1,28 @@
+<h1>Editing order_line</h1>
+
+<% form_for(@order_line) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :order_id %><br />
+    <%= f.text_field :order_id %>
+  </p>
+  <p>
+    <%= f.label :product_id %><br />
+    <%= f.text_field :product_id %>
+  </p>
+  <p>
+    <%= f.label :ordered_quantity %><br />
+    <%= f.text_field :ordered_quantity %>
+  </p>
+  <p>
+    <%= f.label :product_price %><br />
+    <%= f.text_field :product_price %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @order_line %> |
+<%= link_to 'Back', order_lines_path %>

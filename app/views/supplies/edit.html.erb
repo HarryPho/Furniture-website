@@ -1,0 +1,24 @@
+<h1>Editing supply</h1>
+
+<% form_for(@supply) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :vendor_id %><br />
+    <%= f.text_field :vendor_id %>
+  </p>
+  <p>
+    <%= f.label :raw_material_id %><br />
+    <%= f.text_field :raw_material_id %>
+  </p>
+  <p>
+    <%= f.label :supply_unit_price %><br />
+    <%= f.text_field :supply_unit_price %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @supply %> |
+<%= link_to 'Back', supplies_path %>

@@ -1,0 +1,63 @@
+<p>
+  <b>Employee:</b>
+  <%=h @employee.employee_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @employee.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @employee.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @employee.city %>
+</p>
+
+<p>
+  <b>C state:</b>
+  <%=h @employee.c_state %>
+</p>
+
+<p>
+  <b>Zipcode:</b>
+  <%=h @employee.zipcode %>
+</p>
+
+<p>
+  <b>Date hired:</b>
+  <%=h @employee.date_hired %>
+</p>
+
+<p>
+  <b>Birth date:</b>
+  <%=h @employee.birth_date %>
+</p>
+
+<p>
+  <b>Employee supervisor:</b>
+  <%=h @employee.employee_supervisor %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @employee.email %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%=h @employee.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @employee.password %>
+</p>
+
+
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employees_path %>

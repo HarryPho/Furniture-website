@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  vendor_id: 1
+  name: MyString
+  address: MyString
+  city: MyString
+  vstate: MyString
+  zipcode: MyString
+  phone: MyString
+  email: MyString
+  tax_id: MyString
+
+two:
+  vendor_id: 1
+  name: MyString
+  address: MyString
+  city: MyString
+  vstate: MyString
+  zipcode: MyString
+  phone: MyString
+  email: MyString
+  tax_id: MyString

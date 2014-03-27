@@ -1,0 +1,33 @@
+<div class="grid_2">
+
+<center><h1>Order Report</h1></center>
+
+<div class="col_3"></div>
+
+<div class="col_6"><center>
+<table class="striped" cellspacing="0" cellpadding="0">
+
+<thead><tr>
+    <th>Order ID</th>
+    <th>Order Date</th>
+    <th>Customer ID</th>
+    <th>Fulfillment Date</th>
+</tr></thead>
+
+<%for r in @data%>
+
+<tbody><tr>
+    <td><%= r.oid %></td>
+    <td><%= r.o_date %></td>
+    <td><%= r.cid %></td>
+    <td><%= r.date %></td>
+</tr></tbody>
+
+<%end%>
+
+</table>
+</div></center>
+
+<div class="col_3"></div>
+
+</div>

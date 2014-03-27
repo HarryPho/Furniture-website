@@ -1,0 +1,36 @@
+<div class="grid_2">
+  <center><h2><%if !@d.nil? %><%= @d.count %> <%end%> result(s) for  Order ID <%="#{@search_id}"%></font></h2></center>
+<center><h1>Invoices By ID Report</h1></center>
+<%if !@d.nil? and @d.count > 0%>
+<body>
+    <center>
+      <table class="striped" cellspacing="0" cellpadding="0">
+        <thead><tr>
+          <th>Customer ID</th>
+          <th>Name</th>
+          <th>Order ID</th>
+          <th>Order Date</th>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr></thead>
+
+        <%for r in @d%>
+          <tbody><tr>
+            <td><%= r["customer_id"] %></td>
+            <td><%= r["name"] %></td>
+            <td><%= r["order_id"] %></td>
+            <td><%= r["order_date"] %></td>
+            <td><%= r["description"] %></td>
+            <td><%= r["quantity"] %></td>
+            <td><%= number_to_currency(r["total"]) %></td>
+          </tr></tbody>
+        <%end%>
+      </table>
+
+    </center>
+
+    <br /><br /><br /><br />
+  </body>
+  <%end%>
+</div>

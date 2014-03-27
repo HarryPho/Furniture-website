@@ -1,0 +1,100 @@
+.menuNew li {
+  width: 95px;
+
+}
+
+.submenu > li2 {
+	margin-top: 15px;
+	opacity: 0%;
+}
+
+.submenu > li {
+	margin-top: 0px;
+	background: white;
+}
+
+
+.menuNew, .menuNew ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menuNew ul {
+  margin-top: 0;
+}
+
+.menuNew > li {
+  position: relative;
+  display: inline-block;
+  outline: 0;
+}
+
+.submenu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 0;
+  overflow: hidden;
+  /* IE8 needs this */
+  overflow: hidden\0/ !important;
+  max-height: 0;
+  /* A .submenu should be only revealed when hovering the .menu */
+  pointer-events: none;
+}
+
+.menuNew > li:hover .submenu, .menNewu > li:focus .submenu {
+  pointer-events: auto;
+  z-index: 10;
+  max-height: 2000px;
+  -webkit-transition: none;
+     -moz-transition: none;
+}
+
+/* Default
+ ================================================================= */
+.submenu li {
+  opacity: 0;
+
+  -webkit-transition: opacity .4s, -webkit-transform .6s, max-height .6s;
+     -moz-transition: opacity .4s,    -moz-transform .6s, max-height .6s;
+      -ms-transition: opacity .4s,     -ms-transform .6s, max-height .6s;
+       -o-transition: opacity .4s,      -o-transform .6s, max-height .6s;
+          transition: opacity .4s,         transform .6s, max-height .6s;
+}
+
+.menuNew > li:hover .submenu li, .menuNew > li:focus .submenu li {
+  opacity: 1;
+
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
+
+/* Jaws
+ ================================================================= */
+.jaws li {
+  -webkit-transform-origin: 50% -100px;
+     -moz-transform-origin: 50% -100px;
+      -ms-transform-origin: 50% -100px;
+       -o-transform-origin: 50% -100px;
+          transform-origin: 50% -100px;
+}
+
+.jaws li:nth-child(odd) {
+  -webkit-transform: rotate(90deg);
+     -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+       -o-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.jaws li:nth-child(even) {
+  -webkit-transform: rotate(-90deg);
+     -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+       -o-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}

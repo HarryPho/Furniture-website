@@ -1,0 +1,33 @@
+<div class="grid_2">
+
+<center><h1>Order Line Report</h1></center>
+
+<div class="col_3"></div>
+
+<div class="col_6"><center>
+<table class="striped" cellspacing="0" cellpadding="0">
+
+<thead><tr>
+    <th>Order ID</th>
+    <th>Product ID</th>
+    <th>Product Price</th>
+    <th>Order Quantity</th>
+</tr></thead>
+
+<%for r in @data%>
+
+<tbody><tr>
+    <td><%= r.oid %></td>
+    <td><%= r.pid %></td>
+    <td><%= number_to_currency(r.price) %></td>
+    <td><%= r.quantity %></td>
+</tr></tbody>
+
+<%end%>
+
+</table>
+</div></center>
+
+<div class="col_3"></div>
+
+</div>

@@ -1,0 +1,20 @@
+<h1>Editing does_business_in</h1>
+
+<% form_for(@does_business_in) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :customer_id %><br />
+    <%= f.text_field :customer_id %>
+  </p>
+  <p>
+    <%= f.label :territory_id %><br />
+    <%= f.text_field :territory_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @does_business_in %> |
+<%= link_to 'Back', does_business_ins_path %>

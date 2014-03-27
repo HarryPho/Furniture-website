@@ -1,0 +1,13 @@
+<p>
+  <b>Product:</b>
+  <%=h @produced_in.product_id %>
+</p>
+
+<p>
+  <b>Work center:</b>
+  <%=h @produced_in.work_center_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_produced_in_path(@produced_in) %> |
+<%= link_to 'Back', produced_ins_path %>

@@ -1,0 +1,31 @@
+<div class="grid_2">
+  <br /><br /><br />
+  <body>
+    <center>
+      <table class="striped" cellspacing="0" cellpadding="0">
+        <thead><tr>
+          <th>Customer ID</th>
+          <th>Name</th>
+          <th>Order ID</th>
+          <th>Order Date</th>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr></thead>
+
+        <%for r in @d%>
+          <tbody><tr>
+            <td><%= r["customer_id"] %></td>
+            <td><%= r["name"] %></td>
+            <td><%= r["order_id"] %></td>
+            <td><%= r["order_date"] %></td>
+            <td><%= r["description"] %></td>
+            <td><%= r["quantity"] %></td>
+            <td><%= number_to_currency(r["total"]) %></td>
+          </tr></tbody>
+        <%end%>
+      </table>
+
+    </center>
+  </body>
+</div>

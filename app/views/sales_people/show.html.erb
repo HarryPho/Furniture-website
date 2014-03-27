@@ -1,0 +1,38 @@
+<p>
+  <b>Sales person:</b>
+  <%=h @sales_person.sales_person_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @sales_person.name %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @sales_person.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @sales_person.email %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%=h @sales_person.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @sales_person.password %>
+</p>
+
+<p>
+  <b>Territory:</b>
+  <%=h @sales_person.territory_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_sales_person_path(@sales_person) %> |
+<%= link_to 'Back', sales_people_path %>

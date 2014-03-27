@@ -1,0 +1,32 @@
+<h1>Listing sales_people</h1>
+
+<table>
+  <tr>
+    <th>Sales person</th>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Territory</th>
+  </tr>
+
+<% @sales_people.each do |sales_person| %>
+  <tr>
+    <td><%=h sales_person.sales_person_id %></td>
+    <td><%=h sales_person.name %></td>
+    <td><%=h sales_person.phone %></td>
+    <td><%=h sales_person.email %></td>
+    <td><%=h sales_person.username %></td>
+    <td><%=h sales_person.password %></td>
+    <td><%=h sales_person.territory_id %></td>
+    <td><%= link_to 'Show', sales_person %></td>
+    <td><%= link_to 'Edit', edit_sales_person_path(sales_person) %></td>
+    <td><%= link_to 'Destroy', sales_person, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New sales_person', new_sales_person_path %>

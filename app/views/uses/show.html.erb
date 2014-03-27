@@ -1,0 +1,18 @@
+<p>
+  <b>Product:</b>
+  <%=h @use.product_id %>
+</p>
+
+<p>
+  <b>Raw material:</b>
+  <%=h @use.raw_material_id %>
+</p>
+
+<p>
+  <b>Quantity required:</b>
+  <%=h @use.quantity_required %>
+</p>
+
+
+<%= link_to 'Edit', edit_use_path(@use) %> |
+<%= link_to 'Back', uses_path %>

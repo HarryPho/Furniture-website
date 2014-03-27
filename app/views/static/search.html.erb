@@ -1,0 +1,24 @@
+<center><h1><%if !@products.nil? %><%= @products.count %> <%end%> result(s) for <font color="#0000FF"><%=  @search_term %></font></h1></center>
+<br />
+  <%if !@products.nil? and @products.count > 0 %>
+  <center>
+    <div style="display: table;">
+      <div class="brdr" style="display: table-row;" >
+        <div style="display: table-cell; padding: 10px;"><b>Name</b></div>
+        <div style="display: table-cell; padding: 10px;"><b>Finish</b></div>
+        <div style="display: table-cell; padding: 10px;"><b>Price</b></div>
+      </div>
+      <%for p in @products%>
+        <div class=<%=cycle('list_line_even','list_line_odd')%> style="display: table-row;">
+          <div style="display: table-cell; padding: 10px;"><%= p.description %></div>
+          <div style="display: table-cell; padding: 10px;"><%= p.finish %></div>
+          <div style="display: table-cell; padding: 10px;"><%= number_to_currency(p.standard_price) %></div>
+          <div style="display: table-cell; padding: 10px;"><%= link_to 'Show', p %></div>
+        </div>
+      <%end%>
+
+    </div>
+  </center>
+<%else%>
+<br /><br /><br /><br /><br /><br />
+<%end%>

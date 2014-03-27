@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  employee_id: MyString
+  skill_id: MyString
+  qualify_date: 2013-11-21
+
+two:
+  employee_id: MyString
+  skill_id: MyString
+  qualify_date: 2013-11-21

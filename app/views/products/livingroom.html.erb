@@ -1,0 +1,201 @@
+<div class="grid_3">
+
+<center><h1>Living Room</h1></center>
+
+<!-- Tabs Center -->
+<ul class="tabs center">
+  <li><a href="#sets">Sets</a></li>
+  <li><a href="#chairs">Chairs & Sofas</a></li>
+  <li><a href="#TV">TV & Media Furniture</a></li>
+  <li><a href="#storage">Storage</a></li>
+  <li><a href="#table">Coffee & Side Tables</a></li>
+  <li><a href="#lighting">Lighting</a></li>
+  <li><a href="#carpets">Carpets</a></li>
+  <li><a href="#accessories">Accessories</a></li>
+</ul>
+
+<div id="sets" class="tab-content">
+<!-- Gallery -->
+<center>
+<div class="gallery" id="sets">
+
+<%for p in @sets%>
+  <div class ="col_4">
+    <a href=<%= "\"/images/"+ p.photo_popup_path + "\""%>><%= image_tag(p.photo_path, :size => "300x188") %></a>
+    <p><h6><strong><%= p.description %></strong></h6></p>
+    <div class="row-entry">
+        <%= button_to "Details", p, :class => "button", :method => :get %>
+        <!-- <button class="button">Add to <i class="icon-shopping-cart"></i></button> -->
+         <%= button_to "Add to Cart", {:action => "add_to_cart", :id => p }, {:class => "button" "icon-shopping-cart"} %>
+        <button class="button blue"><h7><%=number_to_currency(p.standard_price)%></h7></button>
+    </div>
+  </div>
+<%end%>
+
+</div>
+</center>
+<!--End Gallery -->
+</div>
+
+<div id="chairs" class="tab-content">
+<!-- Gallery -->
+<center>
+<div class="gallery" id="sets">
+
+<%for p in @chairs_and_sofas%>
+  <div class ="col_4">
+    <a href=<%= "\"/images/"+ p.photo_popup_path + "\""%>><%= image_tag(p.photo_path, :size => "300x188") %></a>
+    <p><h6><strong><%= p.description %></strong></h6></p>
+    <div class="row-entry">
+        <%= button_to "Details", p, :class => "button", :method => :get %>
+        <!-- <button class="button">Add to <i class="icon-shopping-cart"></i></button> -->
+         <%= button_to "Add to Cart", {:action => "add_to_cart", :id => p }, {:class => "button" "icon-shopping-cart"} %>
+        <button class="button blue"><h7><%=number_to_currency(p.standard_price)%></h7></button>
+    </div>
+  </div>
+<%end%>
+
+</div>
+</center>
+<!--End Gallery -->
+</div>
+
+<div id="TV" class="tab-content">
+<!-- Gallery -->
+<center>
+<div class="gallery" id="sets">
+
+<%for p in @tv_and_media_furniture%>
+  <div class ="col_4">
+    <a href=<%= "\"/images/"+ p.photo_popup_path + "\""%>><%= image_tag(p.photo_path, :size => "300x188") %></a>
+    <p><h6><strong><%= p.description %></strong></h6></p>
+    <div class="row-entry">
+        <%= button_to "Details", p, :class => "button", :method => :get %>
+        <!-- <button class="button">Add to <i class="icon-shopping-cart"></i></button> -->
+         <%= button_to "Add to Cart", {:action => "add_to_cart", :id => p }, {:class => "button" "icon-shopping-cart"} %>
+        <button class="button blue"><h7><%=number_to_currency(p.standard_price)%></h7></button>
+    </div>
+  </div>
+<%end%>
+
+</div>
+</center>
+<!--End Gallery -->
+</div>
+
+<div id="storage" class="tab-content">
+<!-- Gallery -->
+<center>
+<div class="gallery" id="sets">
+
+<%for p in @storage%>
+  <div class ="col_4">
+    <a href=<%= "\"/images/"+ p.photo_popup_path + "\""%>><%= image_tag(p.photo_path, :size => "300x188") %></a>
+    <p><h6><strong><%= p.description %></strong></h6></p>
+    <div class="row-entry">
+        <%= button_to "Details", p, :class => "button", :method => :get %>
+        <!-- <button class="button">Add to <i class="icon-shopping-cart"></i></button> -->
+         <%= button_to "Add to Cart", {:action => "add_to_cart", :id => p }, {:class => "button" "icon-shopping-cart"} %>
+        <button class="button blue"><h7><%=number_to_currency(p.standard_price)%></h7></button>
+    </div>
+  </div>
+<%end%>
+
+</div>
+</center>
+<!--End Gallery -->
+</div>
+
+<div id="table" class="tab-content">
+<!-- Gallery -->
+<center>
+<div class="gallery" id="sets">
+
+<%for p in @coffe_and_side_tables%>
+  <div class ="col_4">
+    <a href=<%= "\"/images/"+ p.photo_popup_path + "\""%>><%= image_tag(p.photo_path, :size => "300x188") %></a>
+    <p><h6><strong><%= p.description %></strong></h6></p>
+    <div class="row-entry">
+        <%= button_to "Details", p, :class => "button", :method => :get %>
+        <!-- <button class="button">Add to <i class="icon-shopping-cart"></i></button> -->
+         <%= button_to "Add to Cart", {:action => "add_to_cart", :id => p }, {:class => "button" "icon-shopping-cart"} %>
+        <button class="button blue"><h7><%=number_to_currency(p.standard_price)%></h7></button>
+    </div>
+  </div>
+<%end%>
+
+</div>
+</center>
+<!--End Gallery -->
+</div>
+
+<div id="lighting" class="tab-content">
+<!-- Gallery -->
+<center>
+<div class="gallery" id="sets">
+
+<%for p in @lighting%>
+  <div class ="col_4">
+    <a href=<%= "\"/images/"+ p.photo_popup_path + "\""%>><%= image_tag(p.photo_path, :size => "300x188") %></a>
+    <p><h6><strong><%= p.description %></strong></h6></p>
+    <div class="row-entry">
+        <%= button_to "Details", p, :class => "button", :method => :get %>
+        <!-- <button class="button">Add to <i class="icon-shopping-cart"></i></button> -->
+         <%= button_to "Add to Cart", {:action => "add_to_cart", :id => p }, {:class => "button" "icon-shopping-cart"} %>
+        <button class="button blue"><h7><%=number_to_currency(p.standard_price)%></h7></button>
+    </div>
+  </div>
+<%end%>
+
+</div>
+</center>
+<!--End Gallery -->
+</div>
+
+<div id="carpets" class="tab-content">
+<!-- Gallery -->
+<center>
+<div class="gallery" id="sets">
+
+<%for p in @carpets%>
+  <div class ="col_4">
+    <a href=<%= "\"/images/"+ p.photo_popup_path + "\""%>><%= image_tag(p.photo_path, :size => "300x188") %></a>
+    <p><h6><strong><%= p.description %></strong></h6></p>
+    <div class="row-entry">
+        <%= button_to "Details", p, :class => "button", :method => :get %>
+        <!-- <button class="button">Add to <i class="icon-shopping-cart"></i></button> -->
+         <%= button_to "Add to Cart", {:action => "add_to_cart", :id => p }, {:class => "button" "icon-shopping-cart"} %>
+        <button class="button blue"><h7><%=number_to_currency(p.standard_price)%></h7></button>
+    </div>
+  </div>
+<%end%>
+
+</div>
+</center>
+<!--End Gallery -->
+</div>
+
+<div id="accessories" class="tab-content">
+<!-- Gallery -->
+<center>
+<div class="gallery" id="sets">
+
+<%for p in @accessories%>
+  <div class ="col_4">
+    <a href=<%= "\"/images/"+ p.photo_popup_path + "\""%>><%= image_tag(p.photo_path, :size => "300x188") %></a>
+    <p><h6><strong><%= p.description %></strong></h6></p>
+    <div class="row-entry">
+        <%= button_to "Details", p, :class => "button", :method => :get %>
+        <!-- <button class="button">Add to <i class="icon-shopping-cart"></i></button> -->
+         <%= button_to "Add to Cart", {:action => "add_to_cart", :id => p }, {:class => "button" "icon-shopping-cart"} %>
+        <button class="button blue"><h7><%=number_to_currency(p.standard_price)%></h7></button>
+    </div>
+  </div>
+<%end%>
+
+</div>
+</center>
+<!--End Gallery -->
+</div>
+
+</div>

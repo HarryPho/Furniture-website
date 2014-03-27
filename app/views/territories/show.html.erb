@@ -1,0 +1,13 @@
+<p>
+  <b>Territory:</b>
+  <%=h @territory.territory_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @territory.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_territory_path(@territory) %> |
+<%= link_to 'Back', territories_path %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  work_center_id: MyString
+  location: MyString
+
+two:
+  work_center_id: MyString
+  location: MyString

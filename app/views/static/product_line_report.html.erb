@@ -1,0 +1,32 @@
+<div class="grid_2">
+  <br /><br /><br />
+  <body>
+    <center>
+
+      <table class="striped" cellspacing="0" cellpadding="0">
+        <thead><tr>
+          <th>Product ID</th>
+          <th>Name</th>
+          <th>Finish</th>
+          <th>Price</th>
+          <th>Annual Sales Goal</th>
+          <th>Sales to Date</th>
+        </tr></thead>
+
+        <%for r in @data%>
+          <tbody><tr>
+            <td><%= r.product_id %></td>
+            <td><%= r.description %></td>
+            <td><%= r.finish %></td>
+            <td><%= number_to_currency(r.standard_price) %></td>
+            <td><%= number_to_currency(r.annual_sales_goal) %></td>
+            <%@qnty = OrderLine.sum(:ordered_quantity, :conditions => "product_id = #{r.product_id}")%>
+            <td><%= number_to_currency(@qnty*r.standard_price) %></td>
+          </tr></tbody>
+        <%end%>
+      </table>
+
+    </center>
+  </body>
+</div>
+

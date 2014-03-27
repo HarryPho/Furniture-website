@@ -1,0 +1,43 @@
+<div class="grid_2">
+
+<center><h1>Testimonials</h1>
+<div class="col_12">
+<a href="<%=new_testimonial_path%>"><button class="large green"><i class="icon-leaf"></i> New Testimonial</button></a>
+</div>
+</br>
+</br>
+<div class="col_12">
+<% form_tag( params.merge({:controller => "static", :action => "testimonials_search" }), :method => "post", :id => "search_term" ) do %>
+            <%= text_field :search_term , '' , {:size => 24, :placeholder => "Search", :id => 'search_term'} %>
+        <% end %>
+
+</div>
+</center>
+
+</br></br>
+
+<% @testimonials.each do |testimonial| %>
+
+<div class="one_third">
+  <div class="one_third"></div>
+  <div class="review male">
+    <blockquote>
+      <q>"
+        <%=h testimonial.testimonial_content %>"
+      </q>
+      <div class="clearfix">
+        <span class="company-name">
+          <strong>Customer <%=h testimonial.customer_id %></strong>
+            <span><%=h testimonial.testimonial_date %></span>
+          </a>
+        </span>
+      </div>
+    </blockquote>
+  </div>
+</div>
+
+<% end %>
+
+
+
+</div>

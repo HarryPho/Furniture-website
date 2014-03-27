@@ -1,0 +1,22 @@
+<h1>Listing work_centers</h1>
+
+<table>
+  <tr>
+    <th>Work center</th>
+    <th>Location</th>
+  </tr>
+
+<% @work_centers.each do |work_center| %>
+  <tr>
+    <td><%=h work_center.work_center_id %></td>
+    <td><%=h work_center.location %></td>
+    <td><%= link_to 'Show', work_center %></td>
+    <td><%= link_to 'Edit', edit_work_center_path(work_center) %></td>
+    <td><%= link_to 'Destroy', work_center, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New work_center', new_work_center_path %>

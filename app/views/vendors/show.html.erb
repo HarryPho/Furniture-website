@@ -1,0 +1,48 @@
+<p>
+  <b>Vendor:</b>
+  <%=h @vendor.vendor_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @vendor.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @vendor.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @vendor.city %>
+</p>
+
+<p>
+  <b>Vstate:</b>
+  <%=h @vendor.vstate %>
+</p>
+
+<p>
+  <b>Zipcode:</b>
+  <%=h @vendor.zipcode %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @vendor.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @vendor.email %>
+</p>
+
+<p>
+  <b>Tax:</b>
+  <%=h @vendor.tax_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_vendor_path(@vendor) %> |
+<%= link_to 'Back', vendors_path %>

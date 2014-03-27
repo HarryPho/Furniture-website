@@ -1,0 +1,22 @@
+<h1>Listing does_business_ins</h1>
+
+<table>
+  <tr>
+    <th>Customer</th>
+    <th>Territory</th>
+  </tr>
+
+<% @does_business_ins.each do |does_business_in| %>
+  <tr>
+    <td><%=h does_business_in.customer_id %></td>
+    <td><%=h does_business_in.territory_id %></td>
+    <td><%= link_to 'Show', does_business_in %></td>
+    <td><%= link_to 'Edit', edit_does_business_in_path(does_business_in) %></td>
+    <td><%= link_to 'Destroy', does_business_in, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New does_business_in', new_does_business_in_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  testimonial_id: 1
+  testimonial_content: MyText
+  testimonial_date: 2013-11-21
+  customer_id: 1
+
+two:
+  testimonial_id: 1
+  testimonial_content: MyText
+  testimonial_date: 2013-11-21
+  customer_id: 1

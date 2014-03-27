@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  raw_material_id: 1
+  name: MyString
+  unit_of_measure: MyString
+  standard_cost: 1.5
+
+two:
+  raw_material_id: 1
+  name: MyString
+  unit_of_measure: MyString
+  standard_cost: 1.5

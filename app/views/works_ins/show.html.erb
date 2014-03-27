@@ -1,0 +1,13 @@
+<p>
+  <b>Employee:</b>
+  <%=h @works_in.employee_id %>
+</p>
+
+<p>
+  <b>Work center:</b>
+  <%=h @works_in.work_center_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_works_in_path(@works_in) %> |
+<%= link_to 'Back', works_ins_path %>

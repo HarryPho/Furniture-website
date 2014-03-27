@@ -1,0 +1,24 @@
+<h1>Editing product_line</h1>
+
+<% form_for(@product_line) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :product_line_id %><br />
+    <%= f.text_field :product_line_id %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :annual_sales_goal %><br />
+    <%= f.text_field :annual_sales_goal %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @product_line %> |
+<%= link_to 'Back', product_lines_path %>

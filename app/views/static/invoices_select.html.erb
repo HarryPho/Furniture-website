@@ -1,0 +1,9 @@
+<br/> <div style="width: 350px;  margin-left: 35%; margin-right: 40%;">
+   <h3>Invoice for Order ID: </h3>
+ <% form_tag( params.merge({ :action => "invoices_by_id_report" }), :method => "get", :id => "invoice_num" ) do %>
+            <%= text_field :invoice_num , '' , { :id => 'invoice_num'} %><br/><br/>
+            <%= submit_tag "Search" %>
+        <% end %>
+ </div>
+
+<br /><br /><br /><br />

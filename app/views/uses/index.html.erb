@@ -1,0 +1,24 @@
+<h1>Listing uses</h1>
+
+<table>
+  <tr>
+    <th>Product</th>
+    <th>Raw material</th>
+    <th>Quantity required</th>
+  </tr>
+
+<% @uses.each do |use| %>
+  <tr>
+    <td><%=h use.product_id %></td>
+    <td><%=h use.raw_material_id %></td>
+    <td><%=h use.quantity_required %></td>
+    <td><%= link_to 'Show', use %></td>
+    <td><%= link_to 'Edit', edit_use_path(use) %></td>
+    <td><%= link_to 'Destroy', use, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New use', new_use_path %>

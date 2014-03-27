@@ -1,0 +1,71 @@
+<div class="grid_2">
+<%if @cart.empty? %>
+  <center><h2>Shopping cart is empty</h2></center>
+  <br /><br /><br />
+<%else%>
+
+</br>
+<center><h1>Shopping cart</h1></center>
+</br>
+
+<table class="cart">
+	<thead>
+		<tr>
+		  <th>Product</th>
+		  <th>Description</th>
+		  <th>Quantity / Update</th>
+		  <th>Price</th>
+		  <th>Discount</th>
+		  <th>Tax</th>
+		  <th>Total</th>
+		</tr>
+	</thead>
+
+	<tbody>
+        <% @cart.items.each_with_index { |item, idx| %>
+	<tr>
+	  <td> <%= image_tag(item.photo_path, :width => "70") %></td>
+	  <td><%= item.description %></td>
+	  <td>
+		<div class="input-append row-entry">
+                        <input style="max-width:34px" placeholder="1" value=<%="\""+ item.quantity.to_s + "\"" %> id="appendedInputButtons" size="16" type="text" />
+                        <%= button_to "−", {:action => "decrement_count", :id => idx}, {:class => "button"} %>
+                        <%= button_to "+", {:action => "increment_count", :id => idx}, {:class => "button"} %>
+                        <%= button_to "Remove", {:action => "delete_item", :id => idx}, {:class => "button"} %>
+		</div>
+	  </td>
+	  <td><%= number_to_currency(item.price) %></td>
+	  <td>$0.00</td>
+	  <td><%= number_to_currency(item.price*0.08) %></td>
+	  <td><%= number_to_currency(item.price*1.08) %></td>
+	</tr>
+        <% } %>
+
+	<tr>
+	  <td colspan="6" style="text-align:right">Total Price:</td>
+	  <td><%= number_to_currency(@cart.total_price*1.08) %></td>
+	</tr>
+	 <tr>
+	  <td colspan="6" style="text-align:right">Total Discount:</td>
+	  <td> $0.00</td>
+	</tr>
+	 <tr>
+	  <td colspan="6" style="text-align:right">Total Tax:</td>
+	  <td> <%= number_to_currency(@cart.total_tax) %></td>
+	</tr>
+	 <tr>
+	  <td colspan="6" style="text-align:right"><strong>TOTAL =</strong></td>
+	  <td class="" style="display:block"><button class="button red"><h7><%= number_to_currency(@cart.total_price*1.08) %></h7></button></td>
+	</tr>
+	</tbody>
+</table><br />
+<div class="row-entry">
+<%= button_to 'Empty cart', :action => 'empty_cart' %>
+<%= button_to "Proceed to Checkout", {:action => "checkout"}, {:class => "button blue right"} %>
+<a class="right">  </a>
+<%= button_to "Continue Shopping", root_path, {:class => "button right"} %>
+</div>
+<%end%>
+<br /><br /><br /><br />
+
+</div>
